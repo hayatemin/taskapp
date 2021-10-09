@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2MO-rx-Ny1">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="AXn-IV-7w2" detailTextLabel="0HN-lJ-sop" style="IBUITableViewCellStyleSubtitle" id="hKL-ii-xfa">
@@ -46,13 +46,20 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Q5K-bk-lqT">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="2MO-rx-Ny1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Is0-XF-w6a"/>
+                            <constraint firstItem="Q5K-bk-lqT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="LpD-8c-50P"/>
+                            <constraint firstItem="2MO-rx-Ny1" firstAttribute="top" secondItem="Q5K-bk-lqT" secondAttribute="bottom" id="N8O-Xh-fJ1"/>
+                            <constraint firstItem="Q5K-bk-lqT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="O36-uE-gKl"/>
+                            <constraint firstItem="Q5K-bk-lqT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="dmD-Pf-1tp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2MO-rx-Ny1" secondAttribute="trailing" id="gej-DC-I2c"/>
-                            <constraint firstItem="2MO-rx-Ny1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="igj-Fh-cJD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2MO-rx-Ny1" secondAttribute="bottom" id="rhx-sJ-8Ik"/>
                         </constraints>
                     </view>
@@ -64,6 +71,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="Q5K-bk-lqT" id="VHa-NF-GxX"/>
                         <outlet property="tableView" destination="2MO-rx-Ny1" id="c5K-RI-p6k"/>
                         <segue destination="wTr-9A-0Km" kind="show" identifier="cellSegue" id="Bwk-he-e8n"/>
                     </connections>
@@ -114,6 +122,17 @@
                                     <constraint firstAttribute="height" constant="120" id="bXQ-pZ-kdE"/>
                                 </constraints>
                             </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xpl-So-ELO">
+                                <rect key="frame" x="10" y="464" width="394" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jbz-Ke-rds">
+                                <rect key="frame" x="10" y="495" width="394" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ERo-eY-0Ja"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -122,21 +141,28 @@
                             <constraint firstItem="Aqj-hx-HLV" firstAttribute="top" secondItem="BNR-n2-rVr" secondAttribute="bottom" constant="10" id="5K9-ed-vDC"/>
                             <constraint firstItem="v2a-rI-bHQ" firstAttribute="leading" secondItem="ERo-eY-0Ja" secondAttribute="leading" constant="10" id="5tC-Vz-OiT"/>
                             <constraint firstItem="ww0-zU-JEc" firstAttribute="leading" secondItem="ERo-eY-0Ja" secondAttribute="leading" id="6DS-sq-all"/>
+                            <constraint firstItem="jbz-Ke-rds" firstAttribute="top" secondItem="Xpl-So-ELO" secondAttribute="bottom" constant="10" id="A2y-wd-NHn"/>
+                            <constraint firstItem="jbz-Ke-rds" firstAttribute="leading" secondItem="ERo-eY-0Ja" secondAttribute="leading" constant="10" id="CXv-za-1YY"/>
+                            <constraint firstItem="ERo-eY-0Ja" firstAttribute="trailing" secondItem="jbz-Ke-rds" secondAttribute="trailing" constant="10" id="DEh-by-LFp"/>
                             <constraint firstItem="ZQM-cE-B0j" firstAttribute="top" secondItem="Aqj-hx-HLV" secondAttribute="bottom" constant="10" id="Egf-tp-YfF"/>
                             <constraint firstItem="ww0-zU-JEc" firstAttribute="top" secondItem="v2a-rI-bHQ" secondAttribute="bottom" constant="10" id="Gnq-9u-IeQ"/>
                             <constraint firstItem="ERo-eY-0Ja" firstAttribute="trailing" secondItem="ZQM-cE-B0j" secondAttribute="trailing" constant="10" id="K3O-fq-E0R"/>
                             <constraint firstItem="BNR-n2-rVr" firstAttribute="top" secondItem="ERo-eY-0Ja" secondAttribute="top" constant="10" id="Ocg-qf-Xnd"/>
                             <constraint firstItem="ERo-eY-0Ja" firstAttribute="trailing" secondItem="Aqj-hx-HLV" secondAttribute="trailing" constant="10" id="Phr-Pq-2cI"/>
+                            <constraint firstItem="ERo-eY-0Ja" firstAttribute="trailing" secondItem="Xpl-So-ELO" secondAttribute="trailing" constant="10" id="SWE-jh-bBA"/>
                             <constraint firstItem="ERo-eY-0Ja" firstAttribute="trailing" secondItem="BNR-n2-rVr" secondAttribute="trailing" constant="10" id="U7x-Ga-Avd"/>
                             <constraint firstItem="ERo-eY-0Ja" firstAttribute="trailing" secondItem="v2a-rI-bHQ" secondAttribute="trailing" constant="10" id="Va7-WL-FUz"/>
+                            <constraint firstItem="Xpl-So-ELO" firstAttribute="leading" secondItem="ERo-eY-0Ja" secondAttribute="leading" constant="10" id="XZd-8H-Ho0"/>
                             <constraint firstItem="ZQM-cE-B0j" firstAttribute="leading" secondItem="ERo-eY-0Ja" secondAttribute="leading" constant="10" id="Zp4-I1-jje"/>
                             <constraint firstItem="v2a-rI-bHQ" firstAttribute="top" secondItem="ZQM-cE-B0j" secondAttribute="bottom" constant="10" id="b8P-Nm-qt6"/>
+                            <constraint firstItem="Xpl-So-ELO" firstAttribute="top" secondItem="ww0-zU-JEc" secondAttribute="bottom" constant="10" id="eUh-zP-Pbx"/>
                             <constraint firstItem="BNR-n2-rVr" firstAttribute="leading" secondItem="ERo-eY-0Ja" secondAttribute="leading" constant="10" id="lFb-2h-f0M"/>
                             <constraint firstItem="ww0-zU-JEc" firstAttribute="trailing" secondItem="ERo-eY-0Ja" secondAttribute="trailing" id="msF-Vp-DSz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="zBD-9J-TNq"/>
                     <connections>
+                        <outlet property="categoryTextField" destination="jbz-Ke-rds" id="hut-J6-5OJ"/>
                         <outlet property="contentsTextView" destination="v2a-rI-bHQ" id="ABq-Oc-g1n"/>
                         <outlet property="datePicker" destination="ww0-zU-JEc" id="Sd2-3Y-U7C"/>
                         <outlet property="titleTextField" destination="Aqj-hx-HLV" id="gHd-YB-l6L"/>

@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A3CDABC2709A9F100371204 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3CDABB2709A9F100371204 /* Task.swift */; };
 		2AB9F4F9270981C500B727B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9F4F8270981C500B727B8 /* AppDelegate.swift */; };
 		2AB9F4FB270981C500B727B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9F4FA270981C500B727B8 /* SceneDelegate.swift */; };
 		2AB9F4FD270981C500B727B8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9F4FC270981C500B727B8 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A3CDABB2709A9F100371204 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = SOURCE_ROOT; };
 		2AB9F4F5270981C500B727B8 /* taskapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = taskapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AB9F4F8270981C500B727B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AB9F4FA270981C500B727B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		2AB9F4F7270981C500B727B8 /* taskapp */ = {
 			isa = PBXGroup;
 			children = (
+				2A3CDABB2709A9F100371204 /* Task.swift */,
 				2AB9F4F8270981C500B727B8 /* AppDelegate.swift */,
 				2AB9F4FA270981C500B727B8 /* SceneDelegate.swift */,
 				2AB9F4FC270981C500B727B8 /* ViewController.swift */,
@@ -91,7 +94,6 @@
 				7685DB818A938FB7CE6468BB /* Pods-taskapp.debug.xcconfig */,
 				8064E1A51CA6F649B085D893 /* Pods-taskapp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -211,6 +213,7 @@
 			files = (
 				2AB9F4FD270981C500B727B8 /* ViewController.swift in Sources */,
 				2AB9F4F9270981C500B727B8 /* AppDelegate.swift in Sources */,
+				2A3CDABC2709A9F100371204 /* Task.swift in Sources */,
 				2AB9F4FB270981C500B727B8 /* SceneDelegate.swift in Sources */,
 				2AB9F50F2709849900B727B8 /* InputViewController.swift in Sources */,
 			);
