@@ -17,9 +17,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let realm = try! Realm()  // ←追加
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("textDidChangeが呼ばれた")
-        taskArray = try! Realm().objects(Task.self).filter("category='\(searchText)'")
+        let realm = try! Realm()
+        
+        if searchText.isEmpty {
+            taskArray = realm.objects(Task.self)
+        } else {
+            taskArray = realm.objects(Task.self).filter("category BEGINSWITH %@", searchText)
+        }
+        
         tableView.reloadData()
+        
     }
 
     // DB内のタスクが格納されるリスト。
